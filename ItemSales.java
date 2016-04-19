@@ -7,7 +7,7 @@
  * 
  * 
  */
-import java.util.Scanner;
+
 
 public class ItemSales {
 	
@@ -15,8 +15,7 @@ public class ItemSales {
 	private double sales;
 	private double costPerItem;
 	private int bulkSale = 10;
-	private double bulkDisc = sales * 0.10;
-	private double totalDisc = bulkDisc;
+	private double totalDisc;
 	
 	public void registerSale(int n){
 		
@@ -27,11 +26,12 @@ public class ItemSales {
 			sales = 0.9 * ((double)numSold * costPerItem);
 			totalDisc = ((double)numSold * costPerItem) - sales;
 			}
-		else {
-		sales = (double)numSold * costPerItem;
-		totalDisc = 0;
+		else 
+			{
+			sales = (double)numSold * costPerItem;
+			totalDisc = 0;
 		
-	}
+			}
 		
 		
 		}
